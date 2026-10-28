@@ -9,85 +9,122 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap" rel="stylesheet">
     <style>
         body { font-family: 'Noto Sans KR', sans-serif; }
-        .bg-gradient-custom {
-            background: linear-gradient(135deg, #4F46E5 0%, #7C3AED 50%, #EC4899 100%);
+        .bg-poster-main {
+            background: linear-gradient(135deg, #00A3FF 0%, #0066FF 45%, #FF3385 100%);
         }
-        .glass-card {
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
+        .poster-title-lab {
+            color: #FF2E7E;
+            -webkit-text-stroke: 1.5px #FFFFFF;
+            filter: drop-shadow(2px 3px 0px rgba(0,0,0,0.15));
         }
         .checkbox-custom:checked + label {
-            border-color: #6366F1;
-            background-color: #EEF2FF;
+            border-color: #0088FF;
+            background-color: #F0F8FF;
+            box-shadow: 0 4px 12px rgba(0, 136, 255, 0.15);
+        }
+        .checkbox-custom-2:checked + label {
+            border-color: #FF2E7E;
+            background-color: #FFF0F5;
+            box-shadow: 0 4px 12px rgba(255, 46, 126, 0.15);
         }
     </style>
 </head>
-<body class="bg-slate-50 text-slate-800 antialiased min-h-screen flex flex-col justify-between">
+<body class="bg-slate-100 text-slate-800 antialiased min-h-screen flex flex-col justify-between">
 
-    <!-- Header / Banner -->
-    <header class="bg-gradient-custom text-white py-12 px-4 shadow-lg relative overflow-hidden">
-        <div class="max-w-4xl mx-mx-auto text-center relative z-10">
+    <!-- Header / Banner (Poster Color Palette Matched) -->
+    <header class="bg-poster-main text-white py-12 px-4 shadow-xl relative overflow-hidden">
+        <div class="max-w-4xl mx-auto text-center relative z-10">
             <span class="inline-block bg-white/20 text-white text-xs md:text-sm font-semibold px-4 py-1.5 rounded-full mb-3 backdrop-blur-md">
-                🌱 2026 안양시 공익활동지원센터
+                안양시공익활동지원센터
             </span>
-            <h1 class="text-3xl md:text-5xl font-extrabold tracking-tight mb-4">
-                공익활동메이트 역량강화 교육
+            <p class="text-xl md:text-2xl font-black text-amber-300 mb-1 tracking-tight">공익활동메이트</p>
+            <h1 class="text-4xl md:text-6xl font-black tracking-tight mb-3 text-white drop-shadow-md">
+                공익콘텐츠 <span class="poster-title-lab text-5xl md:text-7xl font-extrabold">LAB</span>
             </h1>
-            <p class="text-base md:text-xl font-light text-purple-100 max-w-2xl mx-auto leading-relaxed">
-                더 나은 지역 사회를 만들어가는 당신을 응원합니다!<br class="hidden sm:inline">
-                함께 나누고 성장하는 공익활동의 시작, 메이트 교육과 함께하세요.
+            <p class="text-base md:text-xl font-extrabold bg-pink-500 text-white inline-block px-5 py-1.5 rounded-full mb-4 shadow-md">
+                "공익을 좀 아는 크리에이터"
+            </p>
+            <p class="text-sm md:text-base font-medium text-blue-50 max-w-2xl mx-auto leading-relaxed">
+                우리의 활동을 더 많은 사람에게, 더 매력적으로 알리는 콘텐츠 제작 교육입니다.<br class="hidden sm:inline">
+                <span class="font-bold text-amber-200">우리 동네 좋은 변화를 함께 만들어요!</span>
             </p>
         </div>
-        <!-- Decorative blobs -->
-        <div class="absolute -top-12 -left-12 w-48 h-48 bg-white/10 rounded-full blur-2xl"></div>
-        <div class="absolute -bottom-12 -right-12 w-64 h-64 bg-pink-500/20 rounded-full blur-3xl"></div>
+        <!-- Decorative Poster-style Accents -->
+        <div class="absolute -top-12 -left-12 w-48 h-48 bg-white/15 rounded-full blur-2xl"></div>
+        <div class="absolute -bottom-12 -right-12 w-64 h-64 bg-amber-300/20 rounded-full blur-3xl"></div>
     </header>
 
     <!-- Main Content -->
     <main class="max-w-4xl mx-auto w-full px-4 py-8 md:py-12 flex-grow space-y-8">
 
-        <!-- Intro & Program Details -->
-        <section class="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 text-center hover:shadow-md transition">
-                <div class="w-12 h-12 bg-indigo-100 text-indigo-600 rounded-xl flex items-center justify-center mx-auto mb-4 text-xl">
+        <!-- Intro & Program Details Cards -->
+        <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+            <div class="bg-white p-5 rounded-2xl shadow-sm border border-slate-200 text-center hover:shadow-md transition">
+                <div class="w-10 h-10 bg-sky-100 text-sky-600 rounded-xl flex items-center justify-center mx-auto mb-3 text-lg">
                     <i class="fa-solid fa-users"></i>
                 </div>
-                <h3 class="font-bold text-lg mb-1">모집 대상</h3>
-                <p class="text-sm text-slate-600">공익활동에 관심 있는 시민<br>및 활동가 누구나</p>
+                <h3 class="font-bold text-base mb-1 text-slate-800">모집 대상 & 인원</h3>
+                <p class="text-xs text-slate-600 leading-snug">
+                    공익활동메이트, 공익활동가,<br>희망 시민 <b class="text-sky-600">20명 내외</b><br>
+                    <span class="text-[10px] text-slate-400">* 선착순 마감</span>
+                </p>
             </div>
 
-            <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 text-center hover:shadow-md transition">
-                <div class="w-12 h-12 bg-purple-100 text-purple-600 rounded-xl flex items-center justify-center mx-auto mb-4 text-xl">
-                    <i class="fa-solid fa-calendar-check"></i>
+            <div class="bg-white p-5 rounded-2xl shadow-sm border border-slate-200 text-center hover:shadow-md transition">
+                <div class="w-10 h-10 bg-pink-100 text-pink-600 rounded-xl flex items-center justify-center mx-auto mb-3 text-lg">
+                    <i class="fa-solid fa-location-dot"></i>
                 </div>
-                <h3 class="font-bold text-lg mb-1">교육 일시</h3>
-                <p class="text-sm text-slate-600">1회차: 11월 12일(목) 14:00<br>2회차: 11월 19일(목) 14:00</p>
+                <h3 class="font-bold text-base mb-1 text-slate-800">교육 장소</h3>
+                <p class="text-xs text-slate-600 leading-snug">
+                    <b>안양시공익활동지원센터</b> 대회의실<br>
+                    <span class="text-slate-500">(경기도 안양시 만안구 231, 지하)</span>
+                </p>
             </div>
 
-            <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 text-center hover:shadow-md transition">
-                <div class="w-12 h-12 bg-pink-100 text-pink-600 rounded-xl flex items-center justify-center mx-auto mb-4 text-xl">
-                    <i class="fa-solid fa-gift"></i>
+            <div class="bg-white p-5 rounded-2xl shadow-sm border border-slate-200 text-center hover:shadow-md transition">
+                <div class="w-10 h-10 bg-amber-100 text-amber-600 rounded-xl flex items-center justify-center mx-auto mb-3 text-lg">
+                    <i class="fa-solid fa-laptop"></i>
                 </div>
-                <h3 class="font-bold text-lg mb-1">참가 혜택</h3>
-                <p class="text-sm text-slate-600">수료증 발급, 네트워킹,<br>활동 지원 키트 제공</p>
+                <h3 class="font-bold text-base mb-1 text-slate-800">지참 준비물</h3>
+                <p class="text-xs text-slate-600 leading-snug">
+                    노트북, 휴대폰,<br>
+                    캡컷/VITA 앱, Canva 계정
+                </p>
+            </div>
+
+            <div class="bg-white p-5 rounded-2xl shadow-sm border border-slate-200 text-center hover:shadow-md transition">
+                <div class="w-10 h-10 bg-emerald-100 text-emerald-600 rounded-xl flex items-center justify-center mx-auto mb-3 text-lg">
+                    <i class="fa-solid fa-phone"></i>
+                </div>
+                <h3 class="font-bold text-base mb-1 text-slate-800">문의 전화</h3>
+                <p class="text-xs text-slate-600 leading-snug">
+                    안양시공익활동지원센터<br>
+                    <a href="tel:031-441-3904" class="font-bold text-sky-600 text-sm">031-441-3904</a>
+                </p>
             </div>
         </section>
 
-        <!-- Form Section -->
-        <section class="bg-white rounded-3xl shadow-xl border border-slate-100 p-6 md:p-10 relative">
-            <h2 class="text-2xl font-bold text-slate-900 mb-6 pb-3 border-b flex items-center gap-2">
-                <i class="fa-solid fa-pen-to-square text-indigo-600"></i>
-                교육 참가 신청서 Write Form
-            </h2>
-
-            <!-- Setup Notice -->
-            <div id="scriptAlert" class="mb-6 p-4 bg-amber-50 border border-amber-200 rounded-xl text-amber-800 text-xs md:text-sm">
-                <p class="font-bold flex items-center gap-2">
-                    <i class="fa-solid fa-triangle-exclamation text-amber-600"></i>
-                    웹 앱 URL 설정 안내
-                </p>
-                <p class="mt-1">구글 앱스 스크립트(Google Apps Script) 배포 후 생성된 URL을 아래 코드의 <code>SCRIPT_URL</code>에 붙여넣으면 시트 자동 수집 및 이메일/문자 알림이 작동합니다.</p>
+        <!-- Preparation Info Box -->
+        <div class="bg-sky-50 border border-sky-200 rounded-2xl p-4 flex flex-wrap items-center justify-between gap-3 text-xs md:text-sm">
+            <span class="font-bold text-sky-900 flex items-center gap-2">
+                <i class="fa-solid fa-circle-info text-sky-600"></i>
+                교육 참석 전 사전 준비사항
+            </span>
+            <div class="flex flex-wrap items-center gap-2 text-xs">
+                <span class="bg-white px-2.5 py-1 rounded-md border border-sky-200 text-slate-700 font-medium">💻 노트북</span>
+                <span class="bg-white px-2.5 py-1 rounded-md border border-sky-200 text-slate-700 font-medium">📱 휴대폰</span>
+                <span class="bg-white px-2.5 py-1 rounded-md border border-sky-200 text-slate-700 font-medium">✂️ 캡컷(CapCut) 설치</span>
+                <span class="bg-white px-2.5 py-1 rounded-md border border-sky-200 text-slate-700 font-medium">🎬 VITA 앱 설치</span>
+                <span class="bg-white px-2.5 py-1 rounded-md border border-sky-200 text-slate-700 font-medium">🎨 캔바(Canva) 계정</span>
             </div>
+        </div>
+
+        <!-- Form Section -->
+        <section class="bg-white rounded-3xl shadow-xl border border-slate-200 p-6 md:p-10 relative">
+            <h2 class="text-2xl font-black text-slate-900 mb-6 pb-3 border-b flex items-center gap-2">
+                <i class="fa-solid fa-pen-to-square text-sky-500"></i>
+                교육 참가 신청서
+            </h2>
 
             <form id="applyForm" class="space-y-6" onsubmit="submitForm(event)">
                 <!-- 1. 신청일자 & 성명 -->
@@ -95,13 +132,13 @@
                     <div>
                         <label class="block text-xs font-bold text-slate-600 uppercase mb-1">신청일자 <span class="text-red-500">*</span></label>
                         <input type="date" id="applyDate" name="applyDate" required
-                               class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-indigo-500 focus:outline-none text-sm transition">
+                               class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-sky-500 focus:outline-none text-sm transition">
                     </div>
 
                     <div>
                         <label class="block text-xs font-bold text-slate-600 uppercase mb-1">신청자 성명 <span class="text-red-500">*</span></label>
                         <input type="text" id="userName" name="userName" placeholder="홍길동" required
-                               class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-indigo-500 focus:outline-none text-sm transition">
+                               class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-sky-500 focus:outline-none text-sm transition">
                     </div>
                 </div>
 
@@ -110,30 +147,33 @@
                     <div>
                         <label class="block text-xs font-bold text-slate-600 uppercase mb-1">연락처 (휴대폰 번호) <span class="text-red-500">*</span></label>
                         <input type="tel" id="userPhone" name="userPhone" placeholder="010-1234-5678" required pattern="[0-9]{3}-[0-9]{3,4}-[0-9]{4}|[0-9]{10,11}"
-                               class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-indigo-500 focus:outline-none text-sm transition">
+                               class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-sky-500 focus:outline-none text-sm transition">
                     </div>
 
                     <div>
                         <label class="block text-xs font-bold text-slate-600 uppercase mb-1">활동단체명 <span class="text-slate-400 font-normal">(개인 참여 시 빈칸)</span></label>
                         <input type="text" id="organization" name="organization" placeholder="예: 안양시민연대 (없으면 빈칸)"
-                               class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-indigo-500 focus:outline-none text-sm transition">
+                               class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-sky-500 focus:outline-none text-sm transition">
                     </div>
                 </div>
 
-                <!-- 3. 회차 선택 (1회차 / 2회차) -->
+                <!-- 3. 회차 선택 (1회차 - 블루 / 2회차 - 핑크 포스터 컬러 적용) -->
                 <div class="space-y-3">
                     <label class="block text-xs font-bold text-slate-600 uppercase">참석 회차 선택 <span class="text-red-500">* (복수 선택 가능)</span></label>
                     
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                        <!-- 1회차 -->
+                        <!-- 1회차 (Poster Sky Blue) -->
                         <div>
                             <input type="checkbox" id="session1" name="sessions" value="1회차 신청" class="hidden checkbox-custom">
-                            <label for="session1" class="block p-4 border-2 border-slate-200 rounded-2xl cursor-pointer hover:border-indigo-300 transition relative">
+                            <label for="session1" class="block p-5 border-2 border-sky-100 bg-sky-50/30 rounded-2xl cursor-pointer hover:border-sky-400 transition relative">
                                 <div class="flex items-start justify-between">
                                     <div>
-                                        <span class="inline-block bg-indigo-100 text-indigo-700 text-xs font-bold px-2.5 py-1 rounded-md mb-2">1회차</span>
-                                        <h4 class="font-bold text-slate-800">공익활동의 가치와 기획</h4>
-                                        <p class="text-xs text-slate-500 mt-1"><i class="fa-regular fa-clock"></i> 11월 12일(목) 14:00 - 17:00</p>
+                                        <span class="inline-block bg-sky-500 text-white text-xs font-bold px-3 py-1 rounded-full mb-2">1회차</span>
+                                        <h4 class="font-extrabold text-slate-900 text-lg">숏폼 영상 제작</h4>
+                                        <p class="text-xs text-sky-600 font-bold mt-1">촬영부터 편집, 업로드까지 릴스·숏폼 완전정복!</p>
+                                        <p class="text-xs text-slate-600 mt-3 font-bold bg-white px-3 py-1.5 rounded-lg border border-sky-100 inline-block">
+                                            <i class="fa-regular fa-clock text-sky-500"></i> 11월 10일(화) 오후 2시 ~ 6시
+                                        </p>
                                     </div>
                                     <div class="w-6 h-6 border-2 border-slate-300 rounded-full flex items-center justify-center check-icon">
                                         <i class="fa-solid fa-check text-xs text-white opacity-0 transition"></i>
@@ -142,15 +182,18 @@
                             </label>
                         </div>
 
-                        <!-- 2회차 -->
+                        <!-- 2회차 (Poster Bright Pink) -->
                         <div>
-                            <input type="checkbox" id="session2" name="sessions" value="2회차 신청" class="hidden checkbox-custom">
-                            <label for="session2" class="block p-4 border-2 border-slate-200 rounded-2xl cursor-pointer hover:border-indigo-300 transition relative">
+                            <input type="checkbox" id="session2" name="sessions" value="2회차 신청" class="hidden checkbox-custom-2">
+                            <label for="session2" class="block p-5 border-2 border-pink-100 bg-pink-50/30 rounded-2xl cursor-pointer hover:border-pink-400 transition relative">
                                 <div class="flex items-start justify-between">
                                     <div>
-                                        <span class="inline-block bg-purple-100 text-purple-700 text-xs font-bold px-2.5 py-1 rounded-md mb-2">2회차</span>
-                                        <h4 class="font-bold text-slate-800">홍보·소통 및 실전 역량</h4>
-                                        <p class="text-xs text-slate-500 mt-1"><i class="fa-regular fa-clock"></i> 11월 19일(목) 14:00 - 17:00</p>
+                                        <span class="inline-block bg-pink-500 text-white text-xs font-bold px-3 py-1 rounded-full mb-2">2회차</span>
+                                        <h4 class="font-extrabold text-slate-900 text-lg">웹자보·카드뉴스 제작</h4>
+                                        <p class="text-xs text-pink-600 font-bold mt-1">디자인툴로 기획하고 제작하고 배포까지!</p>
+                                        <p class="text-xs text-slate-600 mt-3 font-bold bg-white px-3 py-1.5 rounded-lg border border-pink-100 inline-block">
+                                            <i class="fa-regular fa-clock text-pink-500"></i> 11월 24일(화) 오후 2시 ~ 6시
+                                        </p>
                                     </div>
                                     <div class="w-6 h-6 border-2 border-slate-300 rounded-full flex items-center justify-center check-icon">
                                         <i class="fa-solid fa-check text-xs text-white opacity-0 transition"></i>
@@ -165,136 +208,65 @@
                 <div>
                     <label class="block text-xs font-bold text-slate-600 uppercase mb-1">문의사항 및 남기실 말씀</label>
                     <textarea id="inquiry" name="inquiry" rows="3" placeholder="교육 시 기대하는 내용이나 궁금한 사항이 있다면 적어주세요."
-                              class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-indigo-500 focus:outline-none text-sm transition"></textarea>
+                              class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-sky-500 focus:outline-none text-sm transition"></textarea>
                 </div>
 
-                <!-- 5. 동의 항목 -->
-                <div class="bg-slate-50 p-4 rounded-2xl space-y-3 border border-slate-200">
+                <!-- 5. 동의 항목 (법적 보강 완료) -->
+                <div class="bg-slate-50 p-4 md:p-5 rounded-2xl space-y-4 border border-slate-200">
+                    <!-- 개인정보 동의 -->
                     <div class="flex items-start gap-3">
-                        <input type="checkbox" id="privacyConsent" required class="mt-1 w-4 h-4 text-indigo-600 rounded focus:ring-indigo-500">
-                        <label for="privacyConsent" class="text-xs text-slate-700 cursor-pointer">
-                            <span class="font-bold">[필수] 개인정보 수집 및 이용 동의</span><br>
-                            신청자 확인, 교육 안내 및 연락 목적으로 신청자 정보를 수집·이용하는 것에 동의합니다.
+                        <input type="checkbox" id="privacyConsent" required class="mt-1 w-4 h-4 text-sky-600 rounded focus:ring-sky-500">
+                        <label for="privacyConsent" class="text-xs text-slate-700 cursor-pointer leading-relaxed">
+                            <span class="font-bold text-slate-900">[필수] 개인정보 수집 및 이용 동의</span><br>
+                            • <b>수집·이용 목적:</b> 교육 참가자 본인 확인, 교육 안내 문자 발송, 교육 관리<br>
+                            • <b>수집 항목:</b> 성명, 연락처(휴대폰 번호), 소속 단체명<br>
+                            • <b>보유 및 이용 기간:</b> 교육 종료 후 사업 결과 보고 완료 시 지체 없이 파기<br>
+                            <span class="text-slate-500 text-[11px]">* 동의를 거부할 수 있으나, 거부 시 교육 신청 및 참가가 제한될 수 있습니다.</span>
                         </label>
                     </div>
 
+                    <hr class="border-slate-200">
+
+                    <!-- 초상권 동의 -->
                     <div class="flex items-start gap-3">
-                        <input type="checkbox" id="mediaConsent" class="mt-1 w-4 h-4 text-indigo-600 rounded focus:ring-indigo-500">
-                        <label for="mediaConsent" class="text-xs text-slate-700 cursor-pointer">
-                            <span class="font-bold">[선택] 초상권 활용 동의</span><br>
-                            교육 중 촬영된 사진 및 영상이 센터의 홍보 자료 및 결과 보고서에 활용되는 것에 동의합니다.
+                        <input type="checkbox" id="mediaConsent" required class="mt-1 w-4 h-4 text-sky-600 rounded focus:ring-sky-500">
+                        <label for="mediaConsent" class="text-xs text-slate-700 cursor-pointer leading-relaxed">
+                            <span class="font-bold text-slate-900">[필수] 초상권 활용 및 제3자 제공 동의</span><br>
+                            • <b>활용 목적:</b> 교육 진행 과정 기록, 안양시공익활동지원센터 홍보물, 홈페이지, 공식 블로그/SNS 게시 및 언론 보도자료 배포<br>
+                            • <b>수집 범위:</b> 교육 중 촬영되는 사진, 동영상 내 신청자의 음성 및 초상<br>
+                            • <b>보유 기간:</b> 센터 활동 기록 보존 및 결과보고 목적을 위해 영구 보존<br>
+                            <span class="text-slate-500 text-[11px]">* 본 교육은 기록 및 홍보 촬영이 포함되어 있으므로, 초상권 동의가 완료되어야 신청이 가능합니다.</span>
                         </label>
                     </div>
                 </div>
 
                 <!-- Submit Button -->
                 <button type="submit" id="submitBtn"
-                        class="w-full bg-gradient-custom text-white font-bold py-4 rounded-2xl shadow-lg hover:opacity-95 transition transform active:scale-95 flex items-center justify-center gap-2 text-lg">
+                        class="w-full bg-poster-main text-white font-extrabold py-4 rounded-2xl shadow-lg hover:opacity-95 transition transform active:scale-95 flex items-center justify-center gap-2 text-lg">
                     <span>교육 신청하기</span>
                     <i class="fa-solid fa-paper-plane"></i>
                 </button>
             </form>
-        </section>
-
-        <!-- Instructions for Google Apps Script Code -->
-        <section class="bg-indigo-900 text-indigo-100 p-6 md:p-8 rounded-3xl space-y-4">
-            <h3 class="text-xl font-bold text-white flex items-center gap-2">
-                <i class="fa-solid fa-cloud-arrow-up text-indigo-300"></i>
-                GitHub Pages 배포 & 구글 연동 안내 (구글 로그인 없이 작동)
-            </h3>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs leading-relaxed">
-                <div class="bg-indigo-950/60 p-4 rounded-xl border border-indigo-700 space-y-2">
-                    <h4 class="font-bold text-amber-300 text-sm">1. GitHub Pages로 웹페이지 무료 배포 방법</h4>
-                    <ol class="list-decimal pl-4 space-y-1 text-slate-300">
-                        <li>GitHub에 로그인 후 새 Repository를 생성합니다 (예: <code>mate-edu</code>).</li>
-                        <li>이 HTML 파일의 이름을 <code>index.html</code>로 저장하여 업로드합니다.</li>
-                        <li>Repository 메뉴에서 <b>Settings</b> &gt; <b>Pages</b> 항목으로 이동합니다.</li>
-                        <li><b>Build and deployment</b>의 Branch를 <code>main</code> (또는 <code>master</code>) 및 <code>/ (root)</code>로 선택하고 <b>Save</b>를 누릅니다.</li>
-                        <li>약 1~2분 후 <code>https://사용자ID.github.io/mate-edu/</code> 형태의 공개 URL이 생성됩니다. 이 링크를 공유하시면 됩니다!</li>
-                    </ol>
-                </div>
-
-                <div class="bg-indigo-950/60 p-4 rounded-xl border border-indigo-700 space-y-2">
-                    <h4 class="font-bold text-amber-300 text-sm">2. 구글 시트 연동 설정 (로그인 없이 누구나 신청)</h4>
-                    <ol class="list-decimal pl-4 space-y-1 text-slate-300">
-                        <li>구글 시트 <b>"공익활동메이트 신청자 명단"</b>을 엽니다.</li>
-                        <li>상단 메뉴 <b>[확장 프로그램] &gt; [Apps Script]</b>를 클릭합니다.</li>
-                        <li>기존 코드를 모두 지우고 아래 제공된 자바스크립트 코드를 복사해서 붙여넣습니다.</li>
-                        <li>우측 상단 <b>[배포] &gt; [새 배포]</b> 클릭 ⚙️(톱니바퀴)에서 <b>[웹 앱]</b> 선택</li>
-                        <li><b class="text-white">다음 사용자 권한으로 실행: 나(Me)</b>, <b class="text-white">액세스 권한이 있는 사용자: 모든 사용자(Anyone)</b>로 설정 필수! (구글 비로그인 신청용)</li>
-                        <li>배포 후 생성된 <b>웹 앱 URL</b>을 복사하여 본 코드의 <code>SCRIPT_URL</code> 부분에 넣어주세요.</li>
-                    </ol>
-                </div>
-            </div>
-            
-            <div class="bg-slate-900/80 p-4 rounded-xl text-xs font-mono overflow-x-auto text-indigo-200 border border-indigo-700">
-<pre><code>// [구글 앱스 스크립트 코드] - 구글 시트 -> 확장 프로그램 -> Apps Script 에 붙여넣기
-
-function doPost(e) {
-  try {
-    var sheet = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet();
-    var data = JSON.parse(e.postData.contents);
-    
-    // 시트에 신청 데이터 행 추가
-    sheet.appendRow([
-      data.applyDate,
-      data.userName,
-      data.userPhone,
-      data.organization || '개인',
-      data.session1 ? 'O' : 'X',
-      data.session2 ? 'O' : 'X',
-      data.inquiry || '-',
-      data.privacyConsent ? '동의' : '미동의',
-      data.mediaConsent ? '동의' : '미동의',
-      new Date()
-    ]);
-
-    // 센터 알림 이메일 (aypublic@aypublic.or.kr)
-    var centerEmail = "aypublic@aypublic.or.kr";
-    var emailSubject = "[신청알림] 공익활동메이트 교육 신청 - " + data.userName + "님";
-    var emailBody = "공익활동메이트 교육 신청서가 접수되었습니다.\n\n"
-                  + "• 신청일자: " + data.applyDate + "\n"
-                  + "• 신청자명: " + data.userName + "\n"
-                  + "• 연락처: " + data.userPhone + "\n"
-                  + "• 소속/단체: " + (data.organization || '개인') + "\n"
-                  + "• 1회차 참여: " + (data.session1 ? '신청' : '미신청') + "\n"
-                  + "• 2회차 참여: " + (data.session2 ? '신청' : '미신청') + "\n"
-                  + "• 문의사항: " + (data.inquiry || '없음') + "\n";
-                  
-    MailApp.sendEmail(centerEmail, emailSubject, emailBody);
-
-    // [선택] 신청자 휴대폰 문자로 안내 발송 (Solapi/Aligo 등 API 연동 서비스 활용)
-    // UrlFetchApp.fetch("https://api.solapi.com/...", { method: "post", ... });
-
-    return ContentService.createTextOutput(JSON.stringify({"result": "success"}))
-      .setMimeType(ContentService.MimeType.JSON);
-  } catch(err) {
-    return ContentService.createTextOutput(JSON.stringify({"result": "error", "error": err.toString()}))
-      .setMimeType(ContentService.MimeType.JSON);
-  }
-}</code></pre>
-            </div>
         </section>
     </main>
 
     <!-- Footer -->
     <footer class="bg-slate-900 text-slate-400 py-6 px-4 text-center text-xs">
         <p class="max-w-4xl mx-auto">
-            © 2026 안양시 공익활동지원센터. All rights reserved.<br>
-            문의: <a href="mailto:aypublic@aypublic.or.kr" class="underline hover:text-white">aypublic@aypublic.or.kr</a>
+            © 안양시공익활동지원센터. All rights reserved.<br>
+            문의: <a href="tel:031-441-3904" class="underline hover:text-white">031-441-3904</a> | <a href="mailto:aypublic@aypublic.or.kr" class="underline hover:text-white">aypublic@aypublic.or.kr</a>
         </p>
     </footer>
 
     <!-- Result Modal -->
     <div id="resultModal" class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm hidden flex items-center justify-center p-4 z-50">
         <div class="bg-white rounded-3xl p-6 md:p-8 max-w-sm w-full text-center shadow-2xl space-y-4">
-            <div class="w-16 h-16 bg-green-100 text-green-600 rounded-full flex items-center justify-center mx-auto text-2xl">
+            <div class="w-16 h-16 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center mx-auto text-2xl">
                 <i class="fa-solid fa-check"></i>
             </div>
             <h3 class="text-xl font-bold text-slate-800">신청이 완료되었습니다!</h3>
             <p class="text-sm text-slate-600 leading-relaxed">
-                안양시 공익활동메이트 교육에 신청해주셔서 감사합니다. 입력해주신 연락처로 confirmation 안내 문자가 발송됩니다.
+                <b>안양시공익활동지원센터</b> 공익콘텐츠 LAB 교육에 신청해주셔서 감사합니다. 안내 문자가 제출하신 연락처로 발송될 예정입니다.
             </p>
             <button onclick="closeModal()" class="w-full bg-slate-900 text-white font-bold py-3 rounded-xl hover:bg-slate-800 transition">
                 확인
@@ -307,7 +279,7 @@ function doPost(e) {
         document.getElementById('applyDate').value = new Date().toISOString().substring(0, 10);
 
         // Apps Script Deployment URL (Replace with your own URL after Apps Script deployment)
-        const SCRIPT_URL = "YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL";
+        const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbyf0lDDZipk2cvV6R4tef_hfMKRkUFiuj_mW2QJExlpiLCqLGUlzGetPqHTQ133vIV5/exec";
 
         function submitForm(event) {
             event.preventDefault();
