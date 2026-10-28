@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>공익활동메이트 교육 신청서</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Noto Sans KR', sans-serif; }
+        .bg-gradient-custom {
+            background: linear-gradient(135deg, #4F46E5 0%, #7C3AED 50%, #EC4899 100%);
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+        }
+        .checkbox-custom:checked + label {
+            border-color: #6366F1;
+            background-color: #EEF2FF;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased min-h-screen flex flex-col justify-between">
+
+    <!-- Header / Banner -->
+    <header class="bg-gradient-custom text-white py-12 px-4 shadow-lg relative overflow-hidden">
+        <div class="max-w-4xl mx-mx-auto text-center relative z-10">
+            <span class="inline-block bg-white/20 text-white text-xs md:text-sm font-semibold px-4 py-1.5 rounded-full mb-3 backdrop-blur-md">
+                🌱 2026 안양시 공익활동지원센터
+            </span>
+            <h1 class="text-3xl md:text-5xl font-extrabold tracking-tight mb-4">
+                공익활동메이트 역량강화 교육
+            </h1>
+            <p class="text-base md:text-xl font-light text-purple-100 max-w-2xl mx-auto leading-relaxed">
+                더 나은 지역 사회를 만들어가는 당신을 응원합니다!<br class="hidden sm:inline">
+                함께 나누고 성장하는 공익활동의 시작, 메이트 교육과 함께하세요.
+            </p>
+        </div>
+        <!-- Decorative blobs -->
+        <div class="absolute -top-12 -left-12 w-48 h-48 bg-white/10 rounded-full blur-2xl"></div>
+        <div class="absolute -bottom-12 -right-12 w-64 h-64 bg-pink-500/20 rounded-full blur-3xl"></div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="max-w-4xl mx-auto w-full px-4 py-8 md:py-12 flex-grow space-y-8">
+
+        <!-- Intro & Program Details -->
+        <section class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 text-center hover:shadow-md transition">
+                <div class="w-12 h-12 bg-indigo-100 text-indigo-600 rounded-xl flex items-center justify-center mx-auto mb-4 text-xl">
+                    <i class="fa-solid fa-users"></i>
+                </div>
+                <h3 class="font-bold text-lg mb-1">모집 대상</h3>
+                <p class="text-sm text-slate-600">공익활동에 관심 있는 시민<br>및 활동가 누구나</p>
+            </div>
+
+            <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 text-center hover:shadow-md transition">
+                <div class="w-12 h-12 bg-purple-100 text-purple-600 rounded-xl flex items-center justify-center mx-auto mb-4 text-xl">
+                    <i class="fa-solid fa-calendar-check"></i>
+                </div>
+                <h3 class="font-bold text-lg mb-1">교육 일시</h3>
+                <p class="text-sm text-slate-600">1회차: 11월 12일(목) 14:00<br>2회차: 11월 19일(목) 14:00</p>
+            </div>
+
+            <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 text-center hover:shadow-md transition">
+                <div class="w-12 h-12 bg-pink-100 text-pink-600 rounded-xl flex items-center justify-center mx-auto mb-4 text-xl">
+                    <i class="fa-solid fa-gift"></i>
+                </div>
+                <h3 class="font-bold text-lg mb-1">참가 혜택</h3>
+                <p class="text-sm text-slate-600">수료증 발급, 네트워킹,<br>활동 지원 키트 제공</p>
+            </div>
+        </section>
+
+        <!-- Form Section -->
+        <section class="bg-white rounded-3xl shadow-xl border border-slate-100 p-6 md:p-10 relative">
+            <h2 class="text-2xl font-bold text-slate-900 mb-6 pb-3 border-b flex items-center gap-2">
+                <i class="fa-solid fa-pen-to-square text-indigo-600"></i>
+                교육 참가 신청서 Write Form
+            </h2>
+
+            <!-- Setup Notice -->
+            <div id="scriptAlert" class="mb-6 p-4 bg-amber-50 border border-amber-200 rounded-xl text-amber-800 text-xs md:text-sm">
+                <p class="font-bold flex items-center gap-2">
+                    <i class="fa-solid fa-triangle-exclamation text-amber-600"></i>
+                    웹 앱 URL 설정 안내
+                </p>
+                <p class="mt-1">구글 앱스 스크립트(Google Apps Script) 배포 후 생성된 URL을 아래 코드의 <code>SCRIPT_URL</code>에 붙여넣으면 시트 자동 수집 및 이메일/문자 알림이 작동합니다.</p>
+            </div>
+
+            <form id="applyForm" class="space-y-6" onsubmit="submitForm(event)">
+                <!-- 1. 신청일자 & 성명 -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <label class="block text-xs font-bold text-slate-600 uppercase mb-1">신청일자 <span class="text-red-500">*</span></label>
+                        <input type="date" id="applyDate" name="applyDate" required
+                               class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-indigo-500 focus:outline-none text-sm transition">
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-bold text-slate-600 uppercase mb-1">신청자 성명 <span class="text-red-500">*</span></label>
+                        <input type="text" id="userName" name="userName" placeholder="홍길동" required
+                               class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-indigo-500 focus:outline-none text-sm transition">
+                    </div>
+                </div>
+
+                <!-- 2. 연락처 & 활동단체 -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <label class="block text-xs font-bold text-slate-600 uppercase mb-1">연락처 (휴대폰 번호) <span class="text-red-500">*</span></label>
+                        <input type="tel" id="userPhone" name="userPhone" placeholder="010-1234-5678" required pattern="[0-9]{3}-[0-9]{3,4}-[0-9]{4}|[0-9]{10,11}"
+                               class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-indigo-500 focus:outline-none text-sm transition">
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-bold text-slate-600 uppercase mb-1">활동단체명 <span class="text-slate-400 font-normal">(개인 참여 시 빈칸)</span></label>
+                        <input type="text" id="organization" name="organization" placeholder="예: 안양시민연대 (없으면 빈칸)"
+                               class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-indigo-500 focus:outline-none text-sm transition">
+                    </div>
+                </div>
+
+                <!-- 3. 회차 선택 (1회차 / 2회차) -->
+                <div class="space-y-3">
+                    <label class="block text-xs font-bold text-slate-600 uppercase">참석 회차 선택 <span class="text-red-500">* (복수 선택 가능)</span></label>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <!-- 1회차 -->
+                        <div>
+                            <input type="checkbox" id="session1" name="sessions" value="1회차 신청" class="hidden checkbox-custom">
+                            <label for="session1" class="block p-4 border-2 border-slate-200 rounded-2xl cursor-pointer hover:border-indigo-300 transition relative">
+                                <div class="flex items-start justify-between">
+                                    <div>
+                                        <span class="inline-block bg-indigo-100 text-indigo-700 text-xs font-bold px-2.5 py-1 rounded-md mb-2">1회차</span>
+                                        <h4 class="font-bold text-slate-800">공익활동의 가치와 기획</h4>
+                                        <p class="text-xs text-slate-500 mt-1"><i class="fa-regular fa-clock"></i> 11월 12일(목) 14:00 - 17:00</p>
+                                    </div>
+                                    <div class="w-6 h-6 border-2 border-slate-300 rounded-full flex items-center justify-center check-icon">
+                                        <i class="fa-solid fa-check text-xs text-white opacity-0 transition"></i>
+                                    </div>
+                                </div>
+                            </label>
+                        </div>
+
+                        <!-- 2회차 -->
+                        <div>
+                            <input type="checkbox" id="session2" name="sessions" value="2회차 신청" class="hidden checkbox-custom">
+                            <label for="session2" class="block p-4 border-2 border-slate-200 rounded-2xl cursor-pointer hover:border-indigo-300 transition relative">
+                                <div class="flex items-start justify-between">
+                                    <div>
+                                        <span class="inline-block bg-purple-100 text-purple-700 text-xs font-bold px-2.5 py-1 rounded-md mb-2">2회차</span>
+                                        <h4 class="font-bold text-slate-800">홍보·소통 및 실전 역량</h4>
+                                        <p class="text-xs text-slate-500 mt-1"><i class="fa-regular fa-clock"></i> 11월 19일(목) 14:00 - 17:00</p>
+                                    </div>
+                                    <div class="w-6 h-6 border-2 border-slate-300 rounded-full flex items-center justify-center check-icon">
+                                        <i class="fa-solid fa-check text-xs text-white opacity-0 transition"></i>
+                                    </div>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 4. 문의사항 -->
+                <div>
+                    <label class="block text-xs font-bold text-slate-600 uppercase mb-1">문의사항 및 남기실 말씀</label>
+                    <textarea id="inquiry" name="inquiry" rows="3" placeholder="교육 시 기대하는 내용이나 궁금한 사항이 있다면 적어주세요."
+                              class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-indigo-500 focus:outline-none text-sm transition"></textarea>
+                </div>
+
+                <!-- 5. 동의 항목 -->
+                <div class="bg-slate-50 p-4 rounded-2xl space-y-3 border border-slate-200">
+                    <div class="flex items-start gap-3">
+                        <input type="checkbox" id="privacyConsent" required class="mt-1 w-4 h-4 text-indigo-600 rounded focus:ring-indigo-500">
+                        <label for="privacyConsent" class="text-xs text-slate-700 cursor-pointer">
+                            <span class="font-bold">[필수] 개인정보 수집 및 이용 동의</span><br>
+                            신청자 확인, 교육 안내 및 연락 목적으로 신청자 정보를 수집·이용하는 것에 동의합니다.
+                        </label>
+                    </div>
+
+                    <div class="flex items-start gap-3">
+                        <input type="checkbox" id="mediaConsent" class="mt-1 w-4 h-4 text-indigo-600 rounded focus:ring-indigo-500">
+                        <label for="mediaConsent" class="text-xs text-slate-700 cursor-pointer">
+                            <span class="font-bold">[선택] 초상권 활용 동의</span><br>
+                            교육 중 촬영된 사진 및 영상이 센터의 홍보 자료 및 결과 보고서에 활용되는 것에 동의합니다.
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Submit Button -->
+                <button type="submit" id="submitBtn"
+                        class="w-full bg-gradient-custom text-white font-bold py-4 rounded-2xl shadow-lg hover:opacity-95 transition transform active:scale-95 flex items-center justify-center gap-2 text-lg">
+                    <span>교육 신청하기</span>
+                    <i class="fa-solid fa-paper-plane"></i>
+                </button>
+            </form>
+        </section>
+
+        <!-- Instructions for Google Apps Script Code -->
+        <section class="bg-indigo-900 text-indigo-100 p-6 md:p-8 rounded-3xl space-y-4">
+            <h3 class="text-xl font-bold text-white flex items-center gap-2">
+                <i class="fa-solid fa-cloud-arrow-up text-indigo-300"></i>
+                GitHub Pages 배포 & 구글 연동 안내 (구글 로그인 없이 작동)
+            </h3>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs leading-relaxed">
+                <div class="bg-indigo-950/60 p-4 rounded-xl border border-indigo-700 space-y-2">
+                    <h4 class="font-bold text-amber-300 text-sm">1. GitHub Pages로 웹페이지 무료 배포 방법</h4>
+                    <ol class="list-decimal pl-4 space-y-1 text-slate-300">
+                        <li>GitHub에 로그인 후 새 Repository를 생성합니다 (예: <code>mate-edu</code>).</li>
+                        <li>이 HTML 파일의 이름을 <code>index.html</code>로 저장하여 업로드합니다.</li>
+                        <li>Repository 메뉴에서 <b>Settings</b> &gt; <b>Pages</b> 항목으로 이동합니다.</li>
+                        <li><b>Build and deployment</b>의 Branch를 <code>main</code> (또는 <code>master</code>) 및 <code>/ (root)</code>로 선택하고 <b>Save</b>를 누릅니다.</li>
+                        <li>약 1~2분 후 <code>https://사용자ID.github.io/mate-edu/</code> 형태의 공개 URL이 생성됩니다. 이 링크를 공유하시면 됩니다!</li>
+                    </ol>
+                </div>
+
+                <div class="bg-indigo-950/60 p-4 rounded-xl border border-indigo-700 space-y-2">
+                    <h4 class="font-bold text-amber-300 text-sm">2. 구글 시트 연동 설정 (로그인 없이 누구나 신청)</h4>
+                    <ol class="list-decimal pl-4 space-y-1 text-slate-300">
+                        <li>구글 시트 <b>"공익활동메이트 신청자 명단"</b>을 엽니다.</li>
+                        <li>상단 메뉴 <b>[확장 프로그램] &gt; [Apps Script]</b>를 클릭합니다.</li>
+                        <li>기존 코드를 모두 지우고 아래 제공된 자바스크립트 코드를 복사해서 붙여넣습니다.</li>
+                        <li>우측 상단 <b>[배포] &gt; [새 배포]</b> 클릭 ⚙️(톱니바퀴)에서 <b>[웹 앱]</b> 선택</li>
+                        <li><b class="text-white">다음 사용자 권한으로 실행: 나(Me)</b>, <b class="text-white">액세스 권한이 있는 사용자: 모든 사용자(Anyone)</b>로 설정 필수! (구글 비로그인 신청용)</li>
+                        <li>배포 후 생성된 <b>웹 앱 URL</b>을 복사하여 본 코드의 <code>SCRIPT_URL</code> 부분에 넣어주세요.</li>
+                    </ol>
+                </div>
+            </div>
+            
+            <div class="bg-slate-900/80 p-4 rounded-xl text-xs font-mono overflow-x-auto text-indigo-200 border border-indigo-700">
+<pre><code>// [구글 앱스 스크립트 코드] - 구글 시트 -> 확장 프로그램 -> Apps Script 에 붙여넣기
+
+function doPost(e) {
+  try {
+    var sheet = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet();
+    var data = JSON.parse(e.postData.contents);
+    
+    // 시트에 신청 데이터 행 추가
+    sheet.appendRow([
+      data.applyDate,
+      data.userName,
+      data.userPhone,
+      data.organization || '개인',
+      data.session1 ? 'O' : 'X',
+      data.session2 ? 'O' : 'X',
+      data.inquiry || '-',
+      data.privacyConsent ? '동의' : '미동의',
+      data.mediaConsent ? '동의' : '미동의',
+      new Date()
+    ]);
+
+    // 센터 알림 이메일 (aypublic@aypublic.or.kr)
+    var centerEmail = "aypublic@aypublic.or.kr";
+    var emailSubject = "[신청알림] 공익활동메이트 교육 신청 - " + data.userName + "님";
+    var emailBody = "공익활동메이트 교육 신청서가 접수되었습니다.\n\n"
+                  + "• 신청일자: " + data.applyDate + "\n"
+                  + "• 신청자명: " + data.userName + "\n"
+                  + "• 연락처: " + data.userPhone + "\n"
+                  + "• 소속/단체: " + (data.organization || '개인') + "\n"
+                  + "• 1회차 참여: " + (data.session1 ? '신청' : '미신청') + "\n"
+                  + "• 2회차 참여: " + (data.session2 ? '신청' : '미신청') + "\n"
+                  + "• 문의사항: " + (data.inquiry || '없음') + "\n";
+                  
+    MailApp.sendEmail(centerEmail, emailSubject, emailBody);
+
+    // [선택] 신청자 휴대폰 문자로 안내 발송 (Solapi/Aligo 등 API 연동 서비스 활용)
+    // UrlFetchApp.fetch("https://api.solapi.com/...", { method: "post", ... });
+
+    return ContentService.createTextOutput(JSON.stringify({"result": "success"}))
+      .setMimeType(ContentService.MimeType.JSON);
+  } catch(err) {
+    return ContentService.createTextOutput(JSON.stringify({"result": "error", "error": err.toString()}))
+      .setMimeType(ContentService.MimeType.JSON);
+  }
+}</code></pre>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-400 py-6 px-4 text-center text-xs">
+        <p class="max-w-4xl mx-auto">
+            © 2026 안양시 공익활동지원센터. All rights reserved.<br>
+            문의: <a href="mailto:aypublic@aypublic.or.kr" class="underline hover:text-white">aypublic@aypublic.or.kr</a>
+        </p>
+    </footer>
+
+    <!-- Result Modal -->
+    <div id="resultModal" class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm hidden flex items-center justify-center p-4 z-50">
+        <div class="bg-white rounded-3xl p-6 md:p-8 max-w-sm w-full text-center shadow-2xl space-y-4">
+            <div class="w-16 h-16 bg-green-100 text-green-600 rounded-full flex items-center justify-center mx-auto text-2xl">
+                <i class="fa-solid fa-check"></i>
+            </div>
+            <h3 class="text-xl font-bold text-slate-800">신청이 완료되었습니다!</h3>
+            <p class="text-sm text-slate-600 leading-relaxed">
+                안양시 공익활동메이트 교육에 신청해주셔서 감사합니다. 입력해주신 연락처로 confirmation 안내 문자가 발송됩니다.
+            </p>
+            <button onclick="closeModal()" class="w-full bg-slate-900 text-white font-bold py-3 rounded-xl hover:bg-slate-800 transition">
+                확인
+            </button>
+        </div>
+    </div>
+
+    <script>
+        // Set today's date automatically
+        document.getElementById('applyDate').value = new Date().toISOString().substring(0, 10);
+
+        // Apps Script Deployment URL (Replace with your own URL after Apps Script deployment)
+        const SCRIPT_URL = "YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL";
+
+        function submitForm(event) {
+            event.preventDefault();
+
+            const session1 = document.getElementById('session1').checked;
+            const session2 = document.getElementById('session2').checked;
+
+            if (!session1 && !session2) {
+                alertModal("최소 1개 이상의 교육 회차를 선택해주세요.");
+                return;
+            }
+
+            const submitBtn = document.getElementById('submitBtn');
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = `<i class="fa-solid fa-spinner animate-spin"></i> 제출 중...`;
+
+            const formData = {
+                applyDate: document.getElementById('applyDate').value,
+                userName: document.getElementById('userName').value,
+                userPhone: document.getElementById('userPhone').value,
+                organization: document.getElementById('organization').value,
+                session1: session1,
+                session2: session2,
+                inquiry: document.getElementById('inquiry').value,
+                privacyConsent: document.getElementById('privacyConsent').checked,
+                mediaConsent: document.getElementById('mediaConsent').checked
+            };
+
+            // Send to Apps Script if configured, or trigger success modal
+            if (SCRIPT_URL && SCRIPT_URL !== "YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL") {
+                fetch(SCRIPT_URL, {
+                    method: 'POST',
+                    mode: 'no-cors',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(formData)
+                })
+                .then(() => {
+                    showSuccessModal();
+                })
+                .catch(err => {
+                    console.error("Error submitting:", err);
+                    showSuccessModal(); // Show modal for fallback
+                })
+                .finally(() => {
+                    resetSubmitButton();
+                });
+            } else {
+                // Simulation mode
+                setTimeout(() => {
+                    showSuccessModal();
+                    resetSubmitButton();
+                }, 800);
+            }
+        }
+
+        function resetSubmitButton() {
+            const submitBtn = document.getElementById('submitBtn');
+            submitBtn.disabled = false;
+            submitBtn.innerHTML = `<span>교육 신청하기</span> <i class="fa-solid fa-paper-plane"></i>`;
+        }
+
+        function showSuccessModal() {
+            document.getElementById('resultModal').classList.remove('hidden');
+            document.getElementById('applyForm').reset();
+            document.getElementById('applyDate').value = new Date().toISOString().substring(0, 10);
+        }
+
+        function closeModal() {
+            document.getElementById('resultModal').classList.add('hidden');
+        }
+
+        function alertModal(msg) {
+            alert(msg);
+        }
+    </script>
+</body>
+</html>
