@@ -236,43 +236,47 @@
                 <!-- 5. 동의 항목 -->
                 <div class="bg-slate-50 p-4 rounded-2xl space-y-3.5 border border-slate-200">
                     <!-- 노쇼 방지 서약 동의 (필수) -->
-                    <div class="flex items-start gap-2.5 bg-amber-50/80 p-3 rounded-xl border border-amber-200">
-                        <input type="checkbox" id="noShowConsent" class="mt-0.5 w-4 h-4 text-amber-600 rounded focus:ring-amber-500 flex-shrink-0">
-                        <label for="noShowConsent" class="text-xs text-slate-700 cursor-pointer leading-relaxed">
-                            <span class="font-bold text-amber-900 text-xs sm:text-sm">[필수] 성실 참석 및 노쇼(No-Show) 방지 동의 <span class="text-red-500">*</span></span><br>
-                            • 본 교육은 선착순 소수정예 무료 교육입니다. 타 신청자의 기회를 위해 <b class="text-amber-900">무단 불참(노쇼)을 하지 않을 것을 서약합니다.</b><br>
-                            • 부득이한 사정으로 취소 시 <b>교육 최소 2일 전까지 사전 연락</b>해주시기 바랍니다.
+                    <div class="flex items-start gap-2.5 bg-amber-50/80 p-3.5 rounded-xl border border-amber-200 relative">
+                        <input type="checkbox" id="noShowConsent" class="mt-0.5 w-4.5 h-4.5 text-amber-600 rounded focus:ring-amber-500 flex-shrink-0 cursor-pointer">
+                        <label for="noShowConsent" class="text-xs md:text-sm text-slate-800 cursor-pointer leading-relaxed">
+                            <span class="font-bold text-amber-950 text-xs sm:text-sm md:text-base">[필수] 성실 참석 및 노쇼(No-Show) 방지 동의 <span class="text-red-500">*</span></span><br>
+                            <span class="text-slate-600 text-xs md:text-sm">
+                                • 본 교육은 선착순 소수정예 무료 교육으로, 타 신청자의 기회를 위해 <b class="text-amber-950 font-semibold">무단 불참(노쇼)을 하지 않을 것을 서약합니다.</b><br>
+                                • 부득이한 사정으로 취소 시 <b>교육 최소 2일 전까지 사전 연락</b>해주시기 바랍니다.
+                            </span>
                         </label>
                     </div>
 
                     <!-- 개인정보 동의 (필수) -->
-                    <div class="flex items-start gap-2.5">
-                        <input type="checkbox" id="privacyConsent" class="mt-0.5 w-4 h-4 text-emerald-600 rounded focus:ring-emerald-500 flex-shrink-0">
-                        <label for="privacyConsent" class="text-xs text-slate-700 cursor-pointer leading-relaxed">
-                            <span class="font-bold text-slate-900 text-xs sm:text-sm">[필수] 개인정보 수집 및 이용 동의 <span class="text-red-500">*</span></span><br>
-                            • <b>수집·이용 목적:</b> 교육 참가자 본인 확인, 교육 안내 발송, 교육 관리<br>
-                            • <b>수집 항목:</b> 성명, 연락처(휴대폰 번호), 이메일, 소속 단체명<br>
-                            • <b>보유 및 이용 기간:</b> 교육 종료 후 사업 결과 보고 완료 시 지체 없이 파기
+                    <div class="flex items-start gap-2.5 bg-white p-3.5 rounded-xl border border-slate-200">
+                        <input type="checkbox" id="privacyConsent" class="mt-0.5 w-4.5 h-4.5 text-emerald-600 rounded focus:ring-emerald-500 flex-shrink-0 cursor-pointer">
+                        <label for="privacyConsent" class="text-xs md:text-sm text-slate-800 cursor-pointer leading-relaxed">
+                            <span class="font-bold text-slate-900 text-xs sm:text-sm md:text-base">[필수] 개인정보 수집 및 이용 동의 <span class="text-red-500">*</span></span><br>
+                            <span class="text-slate-600 text-xs md:text-sm">
+                                • <b>수집·이용 목적:</b> 교육 참가자 본인 확인, 교육 안내 발송, 교육 관리<br>
+                                • <b>수집 항목:</b> 성명, 연락처(휴대폰 번호), 이메일, 소속 단체명<br>
+                                • <b>보유 및 이용 기간:</b> <b class="text-slate-900 font-semibold">교육 종료 후 사업 결과 보고 완료 시 지체 없이 파기</b>
+                            </span>
                         </label>
                     </div>
 
                     <hr class="border-slate-200">
 
                     <!-- 초상권 동의 (선택) -->
-                    <div class="flex items-start gap-2.5">
-                        <input type="checkbox" id="mediaConsent" class="mt-0.5 w-4 h-4 text-emerald-600 rounded focus:ring-emerald-500 flex-shrink-0">
-                        <label for="mediaConsent" class="text-xs text-slate-700 cursor-pointer leading-relaxed">
+                    <div class="flex items-start gap-2.5 p-1">
+                        <input type="checkbox" id="mediaConsent" class="mt-0.5 w-4 h-4 text-emerald-600 rounded focus:ring-emerald-500 flex-shrink-0 cursor-pointer">
+                        <label for="mediaConsent" class="text-xs md:text-sm text-slate-700 cursor-pointer leading-relaxed">
                             <span class="font-bold text-slate-900 text-xs sm:text-sm">[선택] 초상권 활용 및 사진 촬영 동의</span><br>
                             • <b>활용 목적:</b> 교육 현장 기록 및 안양시공익활동지원센터 홈페이지, 블로그, 보도자료 게재<br>
                             • <b>수집 범위:</b> 교육 중 촬영되는 사진 및 영상 내 신청자의 초상<br>
-                            <span class="text-slate-500 text-[11px]">* 미동의 시에도 교육 참석에는 불이익이 없습니다.</span>
+                            <span class="text-slate-500 text-[11px] md:text-xs">* 미동의 시에도 교육 참석에는 불이익이 없습니다.</span>
                         </label>
                     </div>
                 </div>
 
                 <!-- Submit Button -->
                 <button type="submit" id="submitBtn"
-                        class="w-full bg-poster-main text-white font-extrabold py-3.5 rounded-2xl shadow-lg hover:opacity-95 transition transform active:scale-95 flex items-center justify-center gap-2 text-base">
+                        class="w-full bg-poster-main text-white font-extrabold py-3.5 rounded-2xl shadow-lg hover:opacity-95 transition transform active:scale-95 flex items-center justify-center gap-2 text-base md:text-lg">
                     <span>교육 신청하기</span>
                     <i class="fa-solid fa-paper-plane"></i>
                 </button>
@@ -290,17 +294,19 @@
 
     <!-- Result Modal -->
     <div id="resultModal" class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm hidden flex items-center justify-center p-4 z-50">
-        <div class="bg-white rounded-3xl p-6 max-w-sm w-full text-center shadow-2xl space-y-4">
+        <div class="bg-white rounded-3xl p-6 max-w-sm w-full text-center shadow-2xl space-y-4 overflow-hidden relative">
             <div id="modalIcon" class="w-14 h-14 bg-emerald-100 text-emerald-700 rounded-full flex items-center justify-center mx-auto text-xl">
                 <i class="fa-solid fa-check"></i>
             </div>
-            <h3 id="modalTitle" class="text-lg font-bold text-slate-800">신청이 완료되었습니다!</h3>
-            <p id="modalMessage" class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+            <h3 id="modalTitle" class="text-lg md:text-xl font-bold text-slate-800">신청이 완료되었습니다!</h3>
+            <p id="modalMessage" class="text-xs md:text-sm text-slate-600 leading-relaxed">
                 <b>안양시공익활동지원센터</b> 공익콘텐츠 LAB 교육 신청이 정상적으로 접수되었습니다.
             </p>
-            <button onclick="closeModal()" class="w-full bg-slate-900 text-white font-bold py-3 rounded-xl hover:bg-slate-800 transition text-sm">
+            <button onclick="closeModal()" class="w-full bg-slate-900 text-white font-bold py-3.5 rounded-xl hover:bg-slate-800 transition text-sm md:text-base transform active:scale-95">
                 확인
             </button>
+            
+            <div id="confetti" class="absolute inset-0 pointer-events-none"></div>
         </div>
     </div>
 
@@ -315,6 +321,11 @@
                 value = value.substring(0, 3) + '-' + value.substring(3, 7) + '-' + value.substring(7, 11);
             }
             input.value = value;
+        }
+
+        function validateEmail(email) {
+            const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+            return re.test(String(email).toLowerCase());
         }
 
         function submitForm(event) {
@@ -337,6 +348,12 @@
             if (!userPhone || userPhone.length < 12) {
                 showModal("alert", "올바른 연락처를 입력해주세요.", "휴대폰 번호를 010-0000-0000 형식으로 정확히 입력해 주세요.");
                 document.getElementById('userPhone').focus();
+                return;
+            }
+
+            if (userEmail && !validateEmail(userEmail)) {
+                showModal("alert", "올바른 이메일 주소를 입력해주세요.", "example@email.com 형식으로 입력해 주세요.");
+                document.getElementById('userEmail').focus();
                 return;
             }
 
@@ -368,7 +385,9 @@
                 phone: userPhone,
                 email: userEmail,
                 organization: document.getElementById('organization').value.trim(),
-                session: selectedSessions.join(", "),
+                session1: session1 ? "문의" : "",
+                session2: session2 ? "문의" : "",
+                sessionAll: selectedSessions.join(", "),
                 inquiry: document.getElementById('inquiry').value.trim(),
                 noShowConsent: noShowConsent ? "동의함" : "미동의",
                 privacyConsent: privacyConsent ? "동의함" : "미동의",
@@ -384,8 +403,8 @@
                 })
                 .then(response => response.json())
                 .then(data => {
-                    var totalText = data.totalApplicants ? "<br><br><b>현재 총 접수인원:</b> " + data.totalApplicants + "명" : "";
-                    var successMsg = "<b>안양시공익활동지원센터</b> 공익콘텐츠 LAB 교육 신청이 정상 접수되었습니다.<br><br>입력하신 연락처 및 이메일로 개별 안내를 보내드렸습니다." + totalText;
+                    var totalText = data.totalApplicants ? "<br><br><b>현재 총 접수인원:</b> <span class='text-emerald-700 font-bold'>" + data.totalApplicants + "명</span>" : "";
+                    var successMsg = "<b>안양시공익활동지원센터</b> 공익콘텐츠 LAB 교육 신청이 정상 접수되었습니다.<br><br>작성해주신 메일 및 연락처로 확인 안내를 보내드렸습니다." + totalText;
                     showModal("success", "신청이 완료되었습니다!", successMsg);
                 })
                 .catch(err => {
@@ -420,7 +439,7 @@
                 modalIcon.className = "w-14 h-14 bg-amber-100 text-amber-700 rounded-full flex items-center justify-center mx-auto text-xl";
                 modalIcon.innerHTML = `<i class="fa-solid fa-triangle-exclamation"></i>`;
             } else {
-                modalIcon.className = "w-14 h-14 bg-emerald-100 text-emerald-700 rounded-full flex items-center justify-center mx-auto text-xl";
+                modalIcon.className = "w-14 h-14 bg-emerald-100 text-emerald-700 rounded-full flex items-center justify-center mx-auto text-xl transition-all duration-300 transform scale-100";
                 modalIcon.innerHTML = `<i class="fa-solid fa-check"></i>`;
                 document.getElementById('applyForm').reset();
             }
