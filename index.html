@@ -363,11 +363,12 @@
             if (session1) selectedSessions.push("1회차(숏폼)");
             if (session2) selectedSessions.push("2회차(웹자보)");
 
-            const formData = {
+         const formData = {
                 name: userName,
                 phone: userPhone,
                 organization: document.getElementById('organization').value.trim(),
-                session: selectedSessions.join(", "),
+                session1: session1 ? "신청" : "",
+                session2: session2 ? "신청" : "",
                 inquiry: document.getElementById('inquiry').value.trim(),
                 noShowConsent: noShowConsent ? "동의함" : "미동의",
                 privacyConsent: privacyConsent ? "동의함" : "미동의",
@@ -375,7 +376,6 @@
             };
 
             const successMsg = "<b>안양시공익활동지원센터</b> 공익콘텐츠 LAB 교육 신청이 정상 접수되었습니다.<br><br>교육 관련 세부 안내 사항은 입력해주신 연락처로 개별 안내드리겠습니다.";
-
             if (SCRIPT_URL) {
                 fetch(SCRIPT_URL, {
                     method: 'POST',
