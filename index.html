@@ -47,3 +47,66 @@
             background-color: #F0FDF4;
             box-shadow: 0 4px 14px rgba(4, 120, 87, 0.2);
         }
+        .checkbox-custom-2:checked + label .select-badge-2 {
+            background-color: #047857;
+            color: #ffffff;
+            border-color: #047857;
+        }
+        .checkbox-custom-2:checked + label .select-badge-2::after {
+            content: "신청";
+        }
+    </style>
+</head>
+<body class="bg-slate-100 text-slate-800 antialiased min-h-screen flex flex-col justify-between overflow-x-hidden">
+
+    <!-- Header / Banner (연초록 모바일 최적화 테마) -->
+    <header class="bg-poster-main text-white py-10 px-4 shadow-xl relative overflow-hidden">
+        <div class="max-w-4xl mx-auto text-center relative z-10">
+            <span class="inline-block bg-white/20 text-white text-xs md:text-sm font-semibold px-3.5 py-1 rounded-full mb-3 backdrop-blur-md">
+                안양시공익활동지원센터
+            </span>
+            <p class="text-lg md:text-2xl font-black text-amber-200 mb-1 tracking-tight">공익활동메이트</p>
+            <h1 class="text-3xl sm:text-5xl md:text-6xl font-black tracking-tight mb-3 text-white drop-shadow-md leading-tight">
+                공익콘텐츠 <span class="poster-title-lab text-4xl sm:text-6xl md:text-7xl font-extrabold">LAB</span>
+            </h1>
+            <p class="text-xs sm:text-lg font-extrabold bg-emerald-800 text-emerald-100 inline-block px-4 py-1.5 rounded-full mb-3 shadow-md border border-emerald-600">
+                "공익을 좀 아는 크리에이터" (~선착순 20명 마감)
+            </p>
+            <p class="text-xs sm:text-base font-medium text-emerald-50 max-w-2xl mx-auto leading-relaxed">
+                우리의 활동을 더 많은 사람에게, 더 매력적으로 알리는 콘텐츠 제작 교육입니다.<br>
+                <span class="font-bold text-amber-200 block sm:inline mt-1 sm:mt-0">우리 동네 좋은 변화를 함께 만들어요!</span>
+            </p>
+        </div>
+        <div class="absolute -top-12 -left-12 w-48 h-48 bg-white/10 rounded-full blur-2xl"></div>
+        <div class="absolute -bottom-12 -right-12 w-64 h-64 bg-emerald-300/20 rounded-full blur-3xl"></div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="max-w-4xl mx-auto w-full px-4 py-6 md:py-10 flex-grow space-y-6">
+
+        <!-- Intro & Program Details Cards -->
+        <section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3.5">
+            <div class="bg-white p-4 sm:p-5 rounded-2xl shadow-sm border border-slate-200 text-center hover:shadow-md transition">
+                <div class="w-10 h-10 bg-emerald-100 text-emerald-700 rounded-xl flex items-center justify-center mx-auto mb-2.5 text-lg">
+                    <i class="fa-solid fa-users"></i>
+                </div>
+                <h3 class="font-bold text-sm sm:text-base mb-1 text-slate-800">모집 대상 & 인원</h3>
+                <p class="text-xs sm:text-sm text-slate-600 leading-relaxed font-medium">
+                    안양시 공익활동메이트, 공익활동가, 희망 시민 <b class="text-emerald-700 font-bold block sm:inline mt-0.5">20명 내외</b>
+                </p>
+                <span class="text-[11px] text-slate-400 block mt-1">* 선착순 마감</span>
+            </div>
+
+            <div class="bg-white p-4 sm:p-5 rounded-2xl shadow-sm border border-slate-200 text-center hover:shadow-md transition">
+                <div class="w-10 h-10 bg-emerald-100 text-emerald-700 rounded-xl flex items-center justify-center mx-auto mb-2.5 text-lg">
+                    <i class="fa-solid fa-location-dot"></i>
+                </div>
+                <h3 class="font-bold text-sm sm:text-base mb-1 text-slate-800">교육 장소</h3>
+                <p class="text-xs sm:text-sm text-slate-600 leading-relaxed font-medium">
+                    <b>안양시공익활동지원센터</b> 대회의실<br>
+                    <span class="text-slate-500 text-[11px] block mt-0.5">(경기도 안양시 만안구 231, 지하)</span>
+                </p>
+            </div>
+
+            <div class="bg-white p-4 sm:p-5 rounded-2xl shadow-sm border border-slate-200 text-center hover:shadow-md transition">
+                <div class="w-10 h-10 bg-emerald-100 text-emerald-700 rounded-xl flex items
