@@ -5,29 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>안양시공익활동지원센터 - 공익콘텐츠 LAB 교육 신청서</title>
     
-    <!-- 카카오톡 및 SNS 공유 미리보기 설정 (Open Graph Tags) -->
-    <meta property="og:title" content="<교육 신청하기>">
-    <meta property="og:description" content="2026 안양공익활동메이트 공익콘텐츠 LAB (~선착순 20명 마감)">
-    <meta property="og:type" content="website">
-
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap" rel="stylesheet">
     <style>
         body { font-family: 'Noto Sans KR', sans-serif; }
-        
-        /* 연초록 배경 그라데이션 적용 */
         .bg-poster-main {
             background: linear-gradient(135deg, #10B981 0%, #059669 50%, #047857 100%);
         }
-        
         .poster-title-lab {
             color: #FEF08A;
             -webkit-text-stroke: 1px #065F46;
             filter: drop-shadow(2px 3px 0px rgba(0,0,0,0.15));
         }
-        
-        /* 회차 선택 시 우측 상단 '신청' 태그 및 테두리 스타일 */
         .checkbox-custom:checked + label {
             border-color: #059669;
             background-color: #ECFDF5;
@@ -41,7 +31,6 @@
         .checkbox-custom:checked + label .select-badge::after {
             content: "신청";
         }
-
         .checkbox-custom-2:checked + label {
             border-color: #047857;
             background-color: #F0FDF4;
@@ -59,7 +48,6 @@
 </head>
 <body class="bg-slate-100 text-slate-800 antialiased min-h-screen flex flex-col justify-between overflow-x-hidden">
 
-    <!-- Header / Banner -->
     <header class="bg-poster-main text-white py-10 px-4 shadow-xl relative overflow-hidden">
         <div class="max-w-4xl mx-auto text-center relative z-10">
             <span class="inline-block bg-white/20 text-white text-xs md:text-sm font-semibold px-3.5 py-1 rounded-full mb-3 backdrop-blur-md">
@@ -72,81 +60,10 @@
             <p class="text-xs sm:text-lg font-extrabold bg-emerald-800 text-emerald-100 inline-block px-4 py-1.5 rounded-full mb-3 shadow-md border border-emerald-600">
                 "공익을 좀 아는 크리에이터" (~선착순 20명 마감)
             </p>
-            <p class="text-xs sm:text-base font-medium text-emerald-50 max-w-2xl mx-auto leading-relaxed">
-                우리의 활동을 더 많은 사람에게, 더 매력적으로 알리는 콘텐츠 제작 교육입니다.<br>
-                <span class="font-bold text-amber-200 block sm:inline mt-1 sm:mt-0">우리 동네 좋은 변화를 함께 만들어요!</span>
-            </p>
         </div>
-        <div class="absolute -top-12 -left-12 w-48 h-48 bg-white/10 rounded-full blur-2xl"></div>
-        <div class="absolute -bottom-12 -right-12 w-64 h-64 bg-emerald-300/20 rounded-full blur-3xl"></div>
     </header>
 
-    <!-- Main Content -->
     <main class="max-w-4xl mx-auto w-full px-4 py-6 md:py-10 flex-grow space-y-6">
-
-        <!-- Intro & Program Details Cards -->
-        <section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3.5">
-            <div class="bg-white p-4 sm:p-5 rounded-2xl shadow-sm border border-slate-200 text-center hover:shadow-md transition">
-                <div class="w-10 h-10 bg-emerald-100 text-emerald-700 rounded-xl flex items-center justify-center mx-auto mb-2.5 text-lg">
-                    <i class="fa-solid fa-users"></i>
-                </div>
-                <h3 class="font-bold text-sm sm:text-base mb-1 text-slate-800">모집 대상 & 인원</h3>
-                <p class="text-xs sm:text-sm text-slate-600 leading-relaxed font-medium">
-                    안양시 공익활동메이트, 공익활동가, 희망 시민 <b class="text-emerald-700 font-bold block sm:inline mt-0.5">20명 내외</b>
-                </p>
-                <span class="text-[11px] text-slate-400 block mt-1">* 선착순 마감</span>
-            </div>
-
-            <div class="bg-white p-4 sm:p-5 rounded-2xl shadow-sm border border-slate-200 text-center hover:shadow-md transition">
-                <div class="w-10 h-10 bg-emerald-100 text-emerald-700 rounded-xl flex items-center justify-center mx-auto mb-2.5 text-lg">
-                    <i class="fa-solid fa-location-dot"></i>
-                </div>
-                <h3 class="font-bold text-sm sm:text-base mb-1 text-slate-800">교육 장소</h3>
-                <p class="text-xs sm:text-sm text-slate-600 leading-relaxed font-medium">
-                    <b>안양시공익활동지원센터</b> 대회의실<br>
-                    <span class="text-slate-500 text-[11px] block mt-0.5">(경기도 안양시 만안구 231, 지하)</span>
-                </p>
-            </div>
-
-            <div class="bg-white p-4 sm:p-5 rounded-2xl shadow-sm border border-slate-200 text-center hover:shadow-md transition">
-                <div class="w-10 h-10 bg-emerald-100 text-emerald-700 rounded-xl flex items-center justify-center mx-auto mb-2.5 text-lg">
-                    <i class="fa-solid fa-laptop"></i>
-                </div>
-                <h3 class="font-bold text-sm sm:text-base mb-1 text-slate-800">지참 준비물</h3>
-                <p class="text-xs sm:text-sm text-slate-600 leading-relaxed font-medium">
-                    노트북, 휴대폰,<br>
-                    캡컷/VITA 앱, Canva 계정
-                </p>
-            </div>
-
-            <div class="bg-white p-4 sm:p-5 rounded-2xl shadow-sm border border-slate-200 text-center hover:shadow-md transition">
-                <div class="w-10 h-10 bg-emerald-100 text-emerald-700 rounded-xl flex items-center justify-center mx-auto mb-2.5 text-lg">
-                    <i class="fa-solid fa-phone"></i>
-                </div>
-                <h3 class="font-bold text-sm sm:text-base mb-1 text-slate-800">문의 전화</h3>
-                <p class="text-xs sm:text-sm text-slate-600 leading-relaxed font-medium">
-                    안양시공익활동지원센터<br>
-                    <a href="tel:031-441-3904" class="font-bold text-emerald-700 text-sm block mt-0.5">031-441-3904</a>
-                </p>
-            </div>
-        </section>
-
-        <!-- Preparation Info Box -->
-        <div class="bg-emerald-50 border border-emerald-200 rounded-2xl p-4 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 text-xs sm:text-sm">
-            <span class="font-bold text-emerald-900 flex items-center gap-2">
-                <i class="fa-solid fa-circle-info text-emerald-700"></i>
-                교육 참석 전 사전 준비사항
-            </span>
-            <div class="flex flex-wrap items-center gap-1.5 text-xs">
-                <span class="bg-white px-2 py-1 rounded-md border border-emerald-200 text-slate-700 font-medium">💻 노트북</span>
-                <span class="bg-white px-2 py-1 rounded-md border border-emerald-200 text-slate-700 font-medium">📱 휴대폰</span>
-                <span class="bg-white px-2 py-1 rounded-md border border-emerald-200 text-slate-700 font-medium">✂️ CapCut</span>
-                <span class="bg-white px-2 py-1 rounded-md border border-emerald-200 text-slate-700 font-medium">🎬 VITA</span>
-                <span class="bg-white px-2 py-1 rounded-md border border-emerald-200 text-slate-700 font-medium">🎨 Canva</span>
-            </div>
-        </div>
-
-        <!-- Form Section -->
         <section class="bg-white rounded-3xl shadow-xl border border-slate-200 p-5 sm:p-8 relative">
             <h2 class="text-xl sm:text-2xl font-black text-slate-900 mb-5 pb-3 border-b flex items-center gap-2">
                 <i class="fa-solid fa-pen-to-square text-emerald-600"></i>
@@ -154,122 +71,91 @@
             </h2>
 
             <form id="applyForm" class="space-y-5" onsubmit="submitForm(event)" novalidate>
-                <!-- 1. 신청자 성명 & 연락처 -->
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
                         <label class="block text-xs sm:text-sm font-bold text-slate-700 uppercase mb-1">신청자 성명 <span class="text-red-500">*</span></label>
                         <input type="text" id="userName" name="userName" placeholder="이름을 입력하세요"
                                class="w-full px-3.5 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-emerald-500 focus:outline-none text-sm transition">
                     </div>
-
                     <div>
-                        <label class="block text-xs sm:text-sm font-bold text-slate-700 uppercase mb-1">연락처 (휴대폰 번호) <span class="text-red-500">*</span></label>
-                        <input type="tel" id="userPhone" name="userPhone" placeholder="010-0000-0000 (숫자만 입력 가능)" maxlength="13"
+                        <label class="block text-xs sm:text-sm font-bold text-slate-700 uppercase mb-1">연락처 <span class="text-red-500">*</span></label>
+                        <input type="tel" id="userPhone" name="userPhone" placeholder="010-0000-0000" maxlength="13"
                                oninput="formatPhoneNumber(this)"
                                class="w-full px-3.5 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-emerald-500 focus:outline-none text-sm transition">
                     </div>
                 </div>
 
-                <!-- 2. 활동단체 -->
                 <div>
-                    <label class="block text-xs sm:text-sm font-bold text-slate-700 uppercase mb-1">활동단체명 <span class="text-slate-400 font-normal">(개인 참여 시 빈칸 가능)</span></label>
+                    <label class="block text-xs sm:text-sm font-bold text-slate-700 uppercase mb-1">활동단체명</label>
                     <input type="text" id="organization" name="organization" placeholder="예: 안양시민연대 (없으면 빈칸)"
                            class="w-full px-3.5 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-emerald-500 focus:outline-none text-sm transition">
                 </div>
 
-                <!-- 3. 회차 선택 -->
+                <!-- 회차 선택 -->
                 <div class="space-y-2.5">
                     <label class="block text-xs sm:text-sm font-bold text-slate-700 uppercase">참석 회차 선택 <span class="text-red-500">* (복수 선택 가능)</span></label>
-                    
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                        <!-- 1회차 -->
                         <div>
                             <input type="checkbox" id="session1" name="sessions" value="1회차 신청" class="hidden checkbox-custom">
                             <label for="session1" class="block p-4 border-2 border-emerald-100 bg-emerald-50/20 rounded-2xl cursor-pointer hover:border-emerald-500 transition relative">
                                 <div class="flex items-start justify-between">
-                                    <div class="pr-2">
+                                    <div>
                                         <span class="inline-block bg-emerald-600 text-white text-[11px] font-bold px-2.5 py-0.5 rounded-full mb-1.5">1회차</span>
-                                        <h4 class="font-extrabold text-slate-900 text-sm sm:text-base">숏폼 영상 제작</h4>
-                                        <p class="text-xs text-emerald-700 font-bold mt-1">촬영부터 편집, 업로드까지 릴스·숏폼 완전정복!</p>
-                                        <p class="text-xs text-slate-600 mt-2.5 font-bold bg-white px-2.5 py-1 rounded-lg border border-emerald-100 inline-block">
-                                            <i class="fa-regular fa-clock text-emerald-600"></i> 11월 10일(화) 14시 ~ 18시
-                                        </p>
+                                        <h4 class="font-extrabold text-slate-900 text-sm">숏폼 영상 제작</h4>
+                                        <p class="text-xs text-slate-600 mt-2 font-bold bg-white px-2.5 py-1 rounded-lg border border-emerald-100 inline-block">11월 10일(화) 14시</p>
                                     </div>
-                                    <div class="select-badge px-2.5 py-1 text-xs font-bold rounded-lg border border-slate-300 text-slate-400 bg-white transition flex-shrink-0"></div>
+                                    <div class="select-badge px-2.5 py-1 text-xs font-bold rounded-lg border border-slate-300 text-slate-400 bg-white transition"></div>
                                 </div>
                             </label>
                         </div>
-
-                        <!-- 2회차 -->
                         <div>
                             <input type="checkbox" id="session2" name="sessions" value="2회차 신청" class="hidden checkbox-custom-2">
                             <label for="session2" class="block p-4 border-2 border-emerald-100 bg-emerald-50/20 rounded-2xl cursor-pointer hover:border-emerald-600 transition relative">
                                 <div class="flex items-start justify-between">
-                                    <div class="pr-2">
+                                    <div>
                                         <span class="inline-block bg-emerald-700 text-white text-[11px] font-bold px-2.5 py-0.5 rounded-full mb-1.5">2회차</span>
-                                        <h4 class="font-extrabold text-slate-900 text-sm sm:text-base">웹자보·카드뉴스 제작</h4>
-                                        <p class="text-xs text-emerald-800 font-bold mt-1">디자인툴로 기획하고 제작하고 배포까지!</p>
-                                        <p class="text-xs text-slate-600 mt-2.5 font-bold bg-white px-2.5 py-1 rounded-lg border border-emerald-100 inline-block">
-                                            <i class="fa-regular fa-clock text-emerald-700"></i> 11월 24일(화) 14시 ~ 18시
-                                        </p>
+                                        <h4 class="font-extrabold text-slate-900 text-sm">웹자보·카드뉴스 제작</h4>
+                                        <p class="text-xs text-slate-600 mt-2 font-bold bg-white px-2.5 py-1 rounded-lg border border-emerald-100 inline-block">11월 24일(화) 14시</p>
                                     </div>
-                                    <div class="select-badge-2 px-2.5 py-1 text-xs font-bold rounded-lg border border-slate-300 text-slate-400 bg-white transition flex-shrink-0"></div>
+                                    <div class="select-badge-2 px-2.5 py-1 text-xs font-bold rounded-lg border border-slate-300 text-slate-400 bg-white transition"></div>
                                 </div>
                             </label>
                         </div>
                     </div>
                 </div>
 
-                <!-- 4. 문의사항 -->
                 <div>
-                    <label class="block text-xs sm:text-sm font-bold text-slate-700 uppercase mb-1">문의사항 및 남기실 말씀</label>
-                    <textarea id="inquiry" name="inquiry" rows="3" placeholder="교육 시 기대하는 내용이나 궁금한 사항이 있다면 적어주세요."
+                    <label class="block text-xs sm:text-sm font-bold text-slate-700 uppercase mb-1">문의사항</label>
+                    <textarea id="inquiry" name="inquiry" rows="3" placeholder="궁금한 사항이 있다면 적어주세요."
                               class="w-full px-3.5 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-emerald-500 focus:outline-none text-sm transition"></textarea>
                 </div>
 
-                <!-- 5. 동의 항목 -->
+                <!-- 동의 항목 -->
                 <div class="bg-slate-50 p-4 rounded-2xl space-y-3.5 border border-slate-200">
-                    <!-- 노쇼 방지 동의 (필수) -->
                     <div class="flex items-start gap-2.5">
                         <input type="checkbox" id="noShowConsent" class="mt-0.5 w-4 h-4 text-emerald-600 rounded focus:ring-emerald-500 flex-shrink-0">
                         <label for="noShowConsent" class="text-xs text-slate-700 cursor-pointer leading-relaxed">
-                            <span class="font-bold text-slate-900 text-xs sm:text-sm">[필수] 노쇼(무단 불참) 방지 및 안내 사항 동의 <span class="text-red-500">*</span></span><br>
-                            • 본 교육은 소수 정예로 운영되어 무단 불참 시 다른 신청자의 기회를 제한하게 됩니다.<br>
-                            • 부득이한 사정으로 불참 시 <b>교육일 기준 2일 전까지</b> 반드시 취소 연락을 부탁드립니다.<br>
-                            • 사전 연락 없는 <b>당일 무단 불참(노쇼) 시, 향후 센터 후속 프로그램 신청이 제한</b>될 수 있습니다.
+                            <span class="font-bold text-slate-900 text-xs sm:text-sm">[필수] 노쇼(무단 불참) 방지 및 안내 사항 동의 <span class="text-red-500">*</span></span>
                         </label>
                     </div>
-
                     <hr class="border-slate-200">
-
-                    <!-- 개인정보 동의 (필수) -->
                     <div class="flex items-start gap-2.5">
                         <input type="checkbox" id="privacyConsent" class="mt-0.5 w-4 h-4 text-emerald-600 rounded focus:ring-emerald-500 flex-shrink-0">
                         <label for="privacyConsent" class="text-xs text-slate-700 cursor-pointer leading-relaxed">
-                            <span class="font-bold text-slate-900 text-xs sm:text-sm">[필수] 개인정보 수집 및 이용 동의 <span class="text-red-500">*</span></span><br>
-                            • <b>수집·이용 목적:</b> 교육 참가자 본인 확인, 교육 안내 발송, 교육 관리<br>
-                            • <b>수집 항목:</b> 성명, 연락처(휴대폰 번호), 소속 단체명<br>
-                            • <b>보유 및 이용 기간:</b> 교육 종료 후 사업 결과 보고 완료 시 지체 없이 파기
+                            <span class="font-bold text-slate-900 text-xs sm:text-sm">[필수] 개인정보 수집 및 이용 동의 <span class="text-red-500">*</span></span>
                         </label>
                     </div>
-
                     <hr class="border-slate-200">
-
-                    <!-- 초상권 동의 (선택) -->
                     <div class="flex items-start gap-2.5">
                         <input type="checkbox" id="mediaConsent" class="mt-0.5 w-4 h-4 text-emerald-600 rounded focus:ring-emerald-500 flex-shrink-0">
                         <label for="mediaConsent" class="text-xs text-slate-700 cursor-pointer leading-relaxed">
-                            <span class="font-bold text-slate-900 text-xs sm:text-sm">[선택] 초상권 활용 및 사진 촬영 동의</span><br>
-                            • <b>활용 목적:</b> 교육 현장 기록 및 안양시공익활동지원센터 홈페이지, 블로그, 보도자료 게재<br>
-                            • <b>수집 범위:</b> 교육 중 촬영되는 사진 및 영상 내 신청자의 초상<br>
-                            <span class="text-slate-500 text-[11px]">* 미동의 시에도 교육 참석에는 불이익이 없습니다.</span>
+                            <span class="font-bold text-slate-900 text-xs sm:text-sm">[선택] 초상권 활용 및 사진 촬영 동의</span>
                         </label>
                     </div>
                 </div>
 
-                <!-- Submit Button -->
                 <button type="submit" id="submitBtn"
-                        class="w-full bg-poster-main text-white font-extrabold py-3.5 rounded-2xl shadow-lg hover:opacity-95 transition transform active:scale-95 flex items-center justify-center gap-2 text-base">
+                        class="w-full bg-poster-main text-white font-extrabold py-3.5 rounded-2xl shadow-lg hover:opacity-95 transition flex items-center justify-center gap-2 text-base">
                     <span>교육 신청하기</span>
                     <i class="fa-solid fa-paper-plane"></i>
                 </button>
@@ -277,36 +163,25 @@
         </section>
     </main>
 
-    <!-- Footer -->
     <footer class="bg-slate-900 text-slate-400 py-6 px-4 text-center text-xs">
-        <p class="max-w-4xl mx-auto leading-relaxed">
-            © 안양시공익활동지원센터. All rights reserved.<br>
-            문의: <a href="tel:031-441-3904" class="underline hover:text-white">031-441-3904</a> | <a href="mailto:aypublic@aypublic.or.kr" class="underline hover:text-white">aypublic@aypublic.or.kr</a>
-        </p>
+        <p>© 안양시공익활동지원센터. All rights reserved.</p>
     </footer>
 
-    <!-- Result Modal -->
+    <!-- Modal -->
     <div id="resultModal" class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm hidden flex items-center justify-center p-4 z-50">
         <div class="bg-white rounded-3xl p-6 max-w-sm w-full text-center shadow-2xl space-y-4">
             <div id="modalIcon" class="w-14 h-14 bg-emerald-100 text-emerald-700 rounded-full flex items-center justify-center mx-auto text-xl">
                 <i class="fa-solid fa-check"></i>
             </div>
             <h3 id="modalTitle" class="text-lg font-bold text-slate-800">신청이 완료되었습니다!</h3>
-            <p id="modalMessage" class="text-xs sm:text-sm text-slate-600 leading-relaxed">
-                <b>안양시공익활동지원센터</b> 공익콘텐츠 LAB 교육 신청이 정상적으로 접수되었습니다.<br><br>
-                교육 관련 세부 안내 사항은 작성해주신 연락처로 개별 안내해 드릴 예정입니다.
-            </p>
-            <button onclick="closeModal()" class="w-full bg-slate-900 text-white font-bold py-3 rounded-xl hover:bg-slate-800 transition text-sm">
-                확인
-            </button>
+            <p id="modalMessage" class="text-xs sm:text-sm text-slate-600 leading-relaxed"></p>
+            <button onclick="closeModal()" class="w-full bg-slate-900 text-white font-bold py-3 rounded-xl hover:bg-slate-800 transition text-sm">확인</button>
         </div>
     </div>
 
     <script>
-        // Google Apps Script Deployment Web App URL
         const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxrAwrmcvp3_vHCjnqz1w-_ak4WDlBFiDcaD82qFfmJldIM_3NsvwTN4pnOkEUjsGK-/exec";
 
-        // Phone number auto-formatter (010-0000-0000)
         function formatPhoneNumber(input) {
             let value = input.value.replace(/[^0-9]/g, '');
             if (value.length > 3 && value.length <= 7) {
@@ -317,7 +192,6 @@
             input.value = value;
         }
 
-        // Form Submit Handler & Validation
         function submitForm(event) {
             event.preventDefault();
 
@@ -329,29 +203,25 @@
             const privacyConsent = document.getElementById('privacyConsent').checked;
 
             if (!userName) {
-                showModal("alert", "신청자 성명을 입력해주세요.", "성명은 필수 입력 사항입니다.");
+                showModal("alert", "성명 입력", "신청자 성명을 입력해주세요.");
                 document.getElementById('userName').focus();
                 return;
             }
-
             if (!userPhone || userPhone.length < 12) {
-                showModal("alert", "올바른 연락처를 입력해주세요.", "휴대폰 번호를 010-0000-0000 형식으로 정확히 입력해 주세요.");
+                showModal("alert", "연락처 확인", "올바른 연락처를 입력해주세요.");
                 document.getElementById('userPhone').focus();
                 return;
             }
-
             if (!session1 && !session2) {
-                showModal("alert", "참석 회차를 선택해주세요.", "최소 1개 이상의 교육 회차(1회차 또는 2회차)를 선택하셔야 합니다.");
+                showModal("alert", "회차 선택", "최소 1개 이상의 교육 회차를 선택해주세요.");
                 return;
             }
-
             if (!noShowConsent) {
-                showModal("alert", "노쇼 방지 동의가 필요합니다.", "[필수] 노쇼(무단 불참) 방지 및 안내 사항 동의에 체크해주셔야 신청이 가능합니다.");
+                showModal("alert", "동의 필요", "[필수] 노쇼 방지 동의에 체크해주세요.");
                 return;
             }
-
             if (!privacyConsent) {
-                showModal("alert", "개인정보 동의가 필요합니다.", "[필수] 개인정보 수집 및 이용 동의에 체크해주셔야 신청이 가능합니다.");
+                showModal("alert", "동의 필요", "[필수] 개인정보 수집 동의에 체크해주세요.");
                 return;
             }
 
@@ -359,11 +229,8 @@
             submitBtn.disabled = true;
             submitBtn.innerHTML = `<i class="fa-solid fa-spinner animate-spin"></i> 제출 중...`;
 
-            let selectedSessions = [];
-            if (session1) selectedSessions.push("1회차(숏폼)");
-            if (session2) selectedSessions.push("2회차(웹자보)");
-
-         const formData = {
+            // ⭐️ 핵심: 1회차와 2회차를 각각 "신청" 또는 빈칸으로 완벽 분리 전송
+            const formData = {
                 name: userName,
                 phone: userPhone,
                 organization: document.getElementById('organization').value.trim(),
@@ -376,35 +243,24 @@
             };
 
             const successMsg = "<b>안양시공익활동지원센터</b> 공익콘텐츠 LAB 교육 신청이 정상 접수되었습니다.<br><br>교육 관련 세부 안내 사항은 입력해주신 연락처로 개별 안내드리겠습니다.";
-            if (SCRIPT_URL) {
-                fetch(SCRIPT_URL, {
-                    method: 'POST',
-                    mode: 'no-cors',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify(formData)
-                })
-                .then(() => {
-                    showModal("success", "신청이 완료되었습니다!", successMsg);
-                })
-                .catch(err => {
-                    console.error("Error submitting:", err);
-                    showModal("success", "신청이 완료되었습니다!", successMsg);
-                })
-                .finally(() => {
-                    resetSubmitButton();
-                });
-            } else {
-                setTimeout(() => {
-                    showModal("success", "신청이 완료되었습니다!", successMsg);
-                    resetSubmitButton();
-                }, 600);
-            }
-        }
 
-        function resetSubmitButton() {
-            const submitBtn = document.getElementById('submitBtn');
-            submitBtn.disabled = false;
-            submitBtn.innerHTML = `<span>교육 신청하기</span> <i class="fa-solid fa-paper-plane"></i>`;
+            fetch(SCRIPT_URL, {
+                method: 'POST',
+                mode: 'no-cors',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(formData)
+            })
+            .then(() => {
+                showModal("success", "신청 완료!", successMsg);
+            })
+            .catch(err => {
+                console.error("Error submitting:", err);
+                showModal("success", "신청 완료!", successMsg);
+            })
+            .finally(() => {
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = `<span>교육 신청하기</span> <i class="fa-solid fa-paper-plane"></i>`;
+            });
         }
 
         function showModal(type, title, message) {
@@ -429,10 +285,7 @@
 
         function closeModal() {
             document.getElementById('resultModal').classList.add('hidden');
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
+            window.scrollTo({ top: 0, behavior: 'smooth' });
         }
     </script>
 </body>
