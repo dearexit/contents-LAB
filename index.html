@@ -289,19 +289,22 @@
             submitBtn.disabled = true;
             submitBtn.innerHTML = `<i class="fa-solid fa-spinner animate-spin"></i> 제출 중...`;
 
+// 회차 선택 체크박스 값 정확히 추출
+            const session1Checked = document.getElementById('session1').checked;
+            const session2Checked = document.getElementById('session2').checked;
+
             const formData = {
                 name: userName,
                 phone: userPhone,
                 email: userEmail,
-                organization: document.getElementById('organization').value.trim(),
-                session1: session1 ? "1회차(숏폼)" : "",
-                session2: session2 ? "2회차(웹자보)" : "",
-                inquiry: document.getElementById('inquiry').value.trim(),
+                organization: document.getElementById('organization').value.trim() || "없음",
+                session1: session1Checked ? "1회차(숏폼)" : "",
+                session2: session2Checked ? "2회차(웹자보)" : "",
+                inquiry: document.getElementById('inquiry').value.trim() || "없음",
                 noShowConsent: noShowConsent ? "동의함" : "미동의",
                 privacyConsent: privacyConsent ? "동의함" : "미동의",
                 imageConsent: document.getElementById('mediaConsent').checked ? "동의함" : "미동의"
             };
-
             fetch(SCRIPT_URL, {
                 method: 'POST',
                 mode: 'cors',
