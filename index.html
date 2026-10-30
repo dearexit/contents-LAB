@@ -191,13 +191,14 @@
 
                 <!-- 동의 항목 -->
                 <div class="bg-slate-50 p-4 rounded-2xl space-y-3.5 border border-slate-200">
+                    <!-- 수정된 노쇼 동의 문구 -->
                     <div class="flex items-start gap-2.5 bg-amber-50/80 p-3.5 rounded-xl border border-amber-200">
                         <input type="checkbox" id="noShowConsent" class="mt-0.5 w-4.5 h-4.5 text-amber-600 rounded focus:ring-amber-500 flex-shrink-0 cursor-pointer">
                         <label for="noShowConsent" class="text-xs sm:text-sm text-slate-800 cursor-pointer leading-relaxed">
-                            <span class="font-bold text-amber-950 text-xs sm:text-sm">[필수] 성실 참석 및 노쇼(No-Show) 방지 동의 <span class="text-red-500">*</span></span><br>
+                            <span class="font-bold text-amber-950 text-xs sm:text-sm">[필수] 교육 참석 및 무단 불참에 따른 부이익 안내 동의 <span class="text-red-500">*</span></span><br>
                             <span class="text-slate-600 text-xs">
-                                • 타 신청자의 기회를 위해 <b class="text-amber-950 font-semibold">무단 불참(노쇼)을 하지 않을 것을 서약합니다.</b><br>
-                                • 취소 시 <b>교육 최소 2일 전까지 사전 연락</b>해주시기 바랍니다.
+                                • 신청한 교육에 성실히 참석하며, 참석이 어려운 경우 교육 시작 2일 전까지 사전 취소하겠습니다.<br>
+                                • 사전 연락 없이 교육에 불참할 경우, 향후 센터 교육 신청 및 참여가 제한될 수 있음에 동의합니다.
                             </span>
                         </label>
                     </div>
@@ -281,7 +282,7 @@
             if (!userName) { showModal("alert", "성명을 입력해주세요.", "성명은 필수 입력 사항입니다."); document.getElementById('userName').focus(); return; }
             if (!userPhone || userPhone.length < 12) { showModal("alert", "연락처를 확인해주세요.", "휴대폰 번호를 정확히 입력해 주세요."); document.getElementById('userPhone').focus(); return; }
             if (!session1 && !session2) { showModal("alert", "회차를 선택해주세요.", "최소 1개 이상의 회차를 선택하셔야 합니다."); return; }
-            if (!noShowConsent) { showModal("alert", "노쇼 방지 동의 필요", "[필수] 노쇼 방지 동의에 체크해주세요."); return; }
+            if (!noShowConsent) { showModal("alert", "노쇼 방지 동의 필요", "[필수] 교육 참석 및 무단 불참에 따른 부이익 안내 동의에 체크해주세요."); return; }
             if (!privacyConsent) { showModal("alert", "개인정보 동의 필요", "[필수] 개인정보 수집 및 이용 동의에 체크해주세요."); return; }
 
             const submitBtn = document.getElementById('submitBtn');
