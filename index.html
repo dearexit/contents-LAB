@@ -331,7 +331,7 @@
             .then(response => response.json())
             .then(data => {
                 if (data.ok) {
-                    const mailText = data.mailSent ? "입력하신 메일로 신청 확인 안내를 보내드렸습니다." : "교육 전 연락처로 안내드리겠습니다.";
+                    const mailText = data.mailSent ? "입력하신 메일로 신청 확인 안내를 보내드렸습니다." : "기타 문의사항은 031-441-3904로 전화주시기 바랍니다. 교육 때 뵙겠습니다.";
                     showModal("success", "신청 완료!", "정상 접수되었습니다.<br>" + mailText);
                     document.getElementById('applyForm').reset();
                 } else {
